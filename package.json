@@ -1,0 +1,12 @@
+{
+  "name": "node_api_test",
+  "version": "1.0.0",
+  "description": "test node api ",
+  "main": "index.js",
+  "repository": "https://github.com/song111/node_api_test.git",
+  "author": "chrissong",
+  "license": "MIT",
+  "devDependencies": {
+    "request": "^2.88.2"
+  }
+}
