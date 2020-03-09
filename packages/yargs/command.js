@@ -7,7 +7,7 @@ const yargs = require('yargs')
 //  builder:（可选）您可以提供一个构建器对象，以提示您的命令接受的选项：
 //  handler: 您还可以提供处理程序函数，该函数将与解析的argv对象一起执行： parse()
 
-yargs
+const command=   yargs
   .command(
     'get',
     'make a get HTTP request',
@@ -24,4 +24,5 @@ yargs
     }
   )
   .help().argv
-//   .parse('get',{'url':'www.baidu.com'})
+
+  command.parse('get',{'url':'www.baidu.com'})
