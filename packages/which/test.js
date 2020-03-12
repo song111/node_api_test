@@ -28,3 +28,6 @@ which('node', { path: someOtherPath }, function(er, resolved) {
   if (er) throw er
   console.log('found at %j', resolved)
 })
+
+
+// console.log(which.sync('everest'))
