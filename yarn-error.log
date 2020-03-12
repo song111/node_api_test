@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add inquirer
+  /usr/local/bin/node /usr/local/bin/yarn add chalk
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Apple/bin
@@ -14,8 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: getaddrinfo ENOTFOUND rnpm.uyundev.cn
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:64:26)
+  Error: ENOENT: no such file or directory, copyfile '/Users/songjun/Library/Caches/Yarn/v6/npm-is-extendable-1.0.1-a7470f9e426733d81bd81e1155264e3a3507cab4-integrity/node_modules/is-extendable/LICENSE' -> '/Users/songjun/Data/学习/github/node_api_test/node_modules/micromatch/node_modules/is-extendable/LICENSE'
 
 npm manifest: 
   {
