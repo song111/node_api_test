@@ -6,6 +6,9 @@
   "repository": "https://github.com/song111/node_api_test.git",
   "author": "chrissong",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "request": "^2.88.2",
     "yargs": "^15.1.0"
@@ -14,7 +17,9 @@
     "chalk": "^3.0.0",
     "fs-extra": "^8.1.0",
     "git-clone": "^0.1.0",
+    "inquirer": "^7.2.0",
     "ora": "^4.0.3",
+    "progress": "^2.0.3",
     "spinner": "^0.3.4",
     "webpack": "^4.41.5",
     "webpack-chain": "^6.3.0",
