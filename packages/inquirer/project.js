@@ -1,0 +1,81 @@
+/**
+ * Pizza delivery prompt example
+ * run example by writing `node pizza.js` in your console
+ */
+
+"use strict";
+var inquirer = require("inquirer");
+
+const answers = [
+  {
+    name: "isBuiltTemplate",
+    message: "选择内置模版还是现有项目地址？",
+    type: "list",
+    choices: [
+      {
+        key: "built",
+        name: "内置模版",
+        value: true,
+      },
+      {
+        key: "gitproject",
+        name: "现有项目",
+        value: false,
+      },
+    ],
+  },
+  {
+    type: "input",
+    name: "gitAddress",
+    when: (answers) => {
+      return !answers.isBuiltTemplate;
+    },
+    message: "请输入项目地址?",
+    validate: function (value) {
+      var pass =  value.trim().match(
+        /^(http(s)?:\/\/([^\/]+?\/){2}|git@[^:]+:[^\/]+?\/).*?.git$/
+      );
+      if (pass) {
+        return true;
+      }
+
+      return "⛔请输入正确的git地址！";
+    },
+  },
+  {
+    name: "isHasTs",
+    message: "是否引入Typescript？",
+    type: "confirm",
+    when: (answers) => {
+      return answers.isBuiltTemplate;
+    },
+  },
+  {
+    name: "isHasState",
+    message: "是否使用状态管理容器？",
+    type: "confirm",
+    when: (answers) => {
+      return answers.isBuiltTemplate;
+    },
+  },
+  {
+    name: "stateType",
+    when: (answers) => {
+      return answers.isBuiltTemplate && answers.isHasState;
+    },
+    message: "请选择状态管理插件",
+    type: "list",
+    choices: ["redux", "mobx"],
+  },
+  {
+    name: "pkgManager",
+    message: "选择安装包管理器",
+    type: "list",
+    choices: ["yarn", "npm"],
+  },
+];
+
+inquirer.prompt(answers).then((answers) => {
+  console.log("\nOrder receipt:");
+  console.log(JSON.stringify(answers, null, "  "));
+});
