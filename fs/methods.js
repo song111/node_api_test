@@ -4,18 +4,18 @@ const path = require("path");
 const folderName = path.resolve(__dirname, "../", "/test");
 
 // 创建目录
-try {
-  if (!fs.existsSync(folderName)) {
-    fs.mkdirSync(folderName);
-  }
-} catch (err) {
-  console.error(err);
-}
+// try {
+//   if (!fs.existsSync(folderName)) {
+//     fs.mkdirSync(folderName);
+//   }
+// } catch (err) {
+//   console.error(err);
+// }
 
 // 文件描述符
-fs.open(path.resolve(__dirname, "./test/index.txt"), "r", (err, fd) => {
-  console.log(err, fd);
-});
+// fs.open(path.resolve(__dirname, "./test/index.txt"), "r", (err, fd) => {
+//   console.log(err, fd);
+// });
 
 // 使用 fs.watch（）监听器的示例。
 fs.watch(
