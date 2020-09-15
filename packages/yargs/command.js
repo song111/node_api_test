@@ -22,6 +22,8 @@ const command = yargs
       console.log(argv.url);
     }
   )
-  .help().argv;
+  .help();
 
-  yargs.parse('get', { url: 'www.baidu.com' });
+  // yargs.parse('get', { url: 'www.baidu.com' });
+
+  console.log( command.parse(process.argv.slice(2)))

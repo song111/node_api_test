@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@chrissong/asyncfiles": "0.0.1-alpha.2",
     "chalk": "^3.0.0",
     "del": "^5.1.0",
     "dotenv": "^8.2.0",
@@ -20,6 +21,7 @@
     "joi": "^17.2.1",
     "koa": "^2.13.0",
     "lodash": "^4.17.19",
+    "md5": "^2.3.0",
     "ora": "^4.0.3",
     "progress": "^2.0.3",
     "request": "^2.88.2",

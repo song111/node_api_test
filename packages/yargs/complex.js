@@ -15,4 +15,4 @@ require('yargs') // eslint-disable-line
     type: 'boolean',
     description: 'Run with verbose logging'
   })
-  .argv
+  .help()
