@@ -24,4 +24,4 @@ const command = yargs
   )
   .help().argv;
 
-  yargs.parse('get', { url: 'www.baidu.com' });
+  yargs.parse('get');

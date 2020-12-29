@@ -9,5 +9,5 @@ var argv = require('yargs')
     .help('help')
     .argv;
 
-
+console.log(argv)
     // run  node showHelpOnFail.js
